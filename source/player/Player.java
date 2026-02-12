@@ -5,6 +5,7 @@ public class Player {
     private String name;
     private Boolean isBlocked = false;
     private int life = 5;
+    private Piece boat = new Piece();
 
     public Player(String name){
         this.name = name;
@@ -19,7 +20,16 @@ public class Player {
         return sum;
     }
 
+    public void move(int dist){
+        //logger
+        boat.move(dist);
+    }
+
     public String getName() {
         return name;
+    }
+
+    public int getPosition(){
+        return boat.getPosition();
     }
 }
